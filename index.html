@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Red Velvet Album Gallery</h1>
+ 
+    <h2>Hover or tab over the images to see details</h2>
+
+    <div id="gallery">
+        <div id="image-display">Hover over an image below to display here.</div>
+        <div class="thumbnails">
+            
+            <img src="cheetah.jpg" alt="Irene & Seulgi Cheetah cover" class="preview" 
+                 onmouseover="upDate(this)" onmouseleave="unDo()" 
+                 onfocus="upDate(this)" onblur="unDo()">
+                 
+            <img src="revefes2019.jpg" alt="The ReVe Festival: Finale artwork" class="preview" 
+                 onmouseover="upDate(this)" onmouseleave="unDo()" 
+                 onfocus="upDate(this)" onblur="unDo()">
+            <img src="badboyalbcover.jpg" alt="The Perfect Red Velvet Bad Boy cover" class="preview" 
+                 onmouseover="upDate(this)" onmouseleave="unDo()" 
+                 onfocus="upDate(this)" onblur="unDo()">
+                 
+            <img src="chillkill.jpg" alt="Chill Kill album cover" class="preview" 
+                 onmouseover="upDate(this)" onmouseleave="unDo()" 
+                 onfocus="upDate(this)" onblur="unDo()">
+                 
+            <img src="RBBcoverart.jpg" alt="Really Bad Boy album cover" class="preview" 
+                 onmouseover="upDate(this)" onmouseleave="unDo()" 
+                 onfocus="upDate(this)" onblur="unDo()">
+                 
+            <img src="TheRed.jpg" alt="The Red album cover" class="preview" 
+                 onmouseover="upDate(this)" onmouseleave="unDo()" 
+                 onfocus="upDate(this)" onblur="unDo()">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
