@@ -3,43 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Interactive Photo Gallery</title>
+    <title>Interactive Accessible Album Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Red Velvet Album Gallery</h1>
- 
-    <h2>Hover or tab over the images to see details</h2>
+    <header class="header-section">
+        <h1>Red Velvet Visual Concept Gallery</h1>
+        <h2>Hover over or press TAB to navigate through album covers</h2>
+    </header>
 
-    <div id="gallery">
-        <div id="image-display">Hover over an image below to display here.</div>
-        <div class="thumbnails">
-            
-            <img src="cheetah.jpg" alt="Irene & Seulgi Cheetah cover" class="preview" 
-                 onmouseover="upDate(this)" onmouseleave="unDo()" 
-                 onfocus="upDate(this)" onblur="unDo()">
-                 
-            <img src="revefes2019.jpg" alt="The ReVe Festival: Finale artwork" class="preview" 
-                 onmouseover="upDate(this)" onmouseleave="unDo()" 
-                 onfocus="upDate(this)" onblur="unDo()">
-            <img src="badboyalbcover.jpg" alt="The Perfect Red Velvet Bad Boy cover" class="preview" 
-                 onmouseover="upDate(this)" onmouseleave="unDo()" 
-                 onfocus="upDate(this)" onblur="unDo()">
-                 
-            <img src="chillkill.jpg" alt="Chill Kill album cover" class="preview" 
-                 onmouseover="upDate(this)" onmouseleave="unDo()" 
-                 onfocus="upDate(this)" onblur="unDo()">
-                 
-            <img src="RBBcoverart.jpg" alt="Really Bad Boy album cover" class="preview" 
-                 onmouseover="upDate(this)" onmouseleave="unDo()" 
-                 onfocus="upDate(this)" onblur="unDo()">
-                 
-            <img src="TheRed.jpg" alt="The Red album cover" class="preview" 
-                 onmouseover="upDate(this)" onmouseleave="unDo()" 
-                 onfocus="upDate(this)" onblur="unDo()">
-        </div>
-    </div>
+    <main class="main-container">
+        <section aria-label="Selected Image Display">
+            <div id="image-display" aria-live="polite" role="region" aria-atomic="true">
+                <span>Hover or focus on a thumbnail below to display full cover.</span>
+            </div>
+        </section>
+
+        <section aria-label="Thumbnail Catalog" class="gallery-grid">
+            <figure class="gallery-card">
+                <img class="preview" 
+                     src="cheetah.jpg" 
+                     alt="Red Velvet Irene & Seulgi - Cheetah Japan Mini Album Cover" 
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <figcaption class="caption">Cheetah (2020)</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img class="preview" 
+                     src="revefes2019.jpg" 
+                     alt="Red Velvet - The ReVe Festival: Finale Concept Artwork" 
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <figcaption class="caption">ReVe Festival (2019)</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img class="preview" 
+                     src="badboyalbcover.jpg" 
+                     alt="Red Velvet - The Perfect Red Velvet Bad Boy Edition Cover" 
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <figcaption class="caption">Bad Boy (2018)</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img class="preview" 
+                     src="chillkill.jpg" 
+                     alt="Red Velvet - Chill Kill 3rd Full Album Traditional Artwork Cover" 
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <figcaption class="caption">Chill Kill (2023)</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img class="preview" 
+                     src="RBBcoverart.jpg" 
+                     alt="Red Velvet - Really Bad Boy (RBB) Mini Album Cover" 
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <figcaption class="caption">RBB (2018)</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img class="preview" 
+                     src="Perfect velvet.jpg" 
+                     alt="Red Velvet - Perfect Velvet 2nd Full Album House Artwork Cover" 
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+                <figcaption class="caption">Perfect Velvet (2017)</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <p>Interactive Web Gallery &copy; 2026 - Designed for Full Accessibility</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
