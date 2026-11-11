@@ -13,12 +13,13 @@
     </header>
 
     <main class="main-container">
-        <section aria-label="Selected Image Display">
-            <div id="image-display" aria-live="polite" role="region" aria-atomic="true">
-                <span>Hover or focus on a thumbnail below to display full cover.</span>
-            </div>
+        <!-- Khung xem ảnh chính và thanh chú thích riêng biệt nằm bên dưới -->
+        <section aria-label="Selected Image Display" class="hero-stage">
+            <div id="image-display" role="region" aria-label="Full size preview display"></div>
+            <div id="image-caption" aria-live="polite" aria-atomic="true">Hover or focus on a thumbnail below to display full cover.</div>
         </section>
 
+        <!-- Danh sách 6 hình ảnh với đầy đủ thuộc tính sự kiện Mouse + Keyboard -->
         <section aria-label="Thumbnail Catalog" class="gallery-grid">
             <figure class="gallery-card">
                 <img class="preview" 
@@ -89,7 +90,7 @@
     </main>
 
     <footer class="footer-section">
-        <p>Interactive Web Gallery &copy; 2026 - Designed for Full Accessibility</p>
+        <p>Interactive Web Gallery &copy; 2026 - Designed for Full Accessibility (Keyboard & Screen Reader Compatible)</p>
     </footer>
 
     <script src="script.js"></script>
