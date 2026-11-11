@@ -1,30 +1,40 @@
 
 function upDate(previewPic) {
-    console.log("Event triggered: upDate() on " + previewPic.alt);
 
-    let displayDiv = document.getElementById('image-display');
-    displayDiv.style.backgroundImage = "url('" + previewPic.src + "')";
+    console.log("[EVENT TRIGGERED] upDate() activated on image:", previewPic.src);
+    console.log("Alt text retrieved:", previewPic.alt);
 
-    displayDiv.innerHTML = previewPic.alt;
+    const displayDiv = document.getElementById('image-display');
+
+    displayDiv.style.backgroundImage = `url('${previewPic.src}')`;
+    displayDiv.innerHTML = `<span>${previewPic.alt}</span>`;
+    displayDiv.style.borderColor = "#e60023";
 }
+
 
 function unDo() {
-    console.log("Event triggered: unDo()");
+    console.log("[EVENT TRIGGERED] unDo() activated: resetting gallery display stage.");
 
-    let displayDiv = document.getElementById('image-display');
+    const displayDiv = document.getElementById('image-display');
     displayDiv.style.backgroundImage = "url('')";
-    displayDiv.innerHTML = "Hover over an image below to display here.";
+    displayDiv.innerHTML = "<span>Hover or focus on a thumbnail below to display full cover.</span>";
+    displayDiv.style.borderColor = "rgba(255, 255, 255, 0.15)";
 }
 
-function initializeGallery() {
-    console.log("Page load event triggered: initializeGallery()");
-  
-    let images = document.querySelectorAll('.preview');
+
+ 
+function addTabFocusAttributes() {
+    console.log("[PAGE LOAD] onload event triggered: addTabFocusAttributes() starting...");
+
+    const images = document.querySelectorAll('.preview');
+    console.log(`[PAGE LOAD] Total thumbnails identified: ${images.length}`);
 
     for (let i = 0; i < images.length; i++) {
         images[i].setAttribute('tabindex', '0');
-        console.log("Added tabindex='0' to image " + (i + 1));
+        console.log(`[TABINDEX ADDED] Applied tabindex='0' to thumbnail #${i + 1} (${images[i].alt})`);
     }
+
+    console.log("[PAGE LOAD] Initialization complete. Gallery is fully focusable.");
 }
 
-window.onload = initializeGallery;
+window.onload = addTabFocusAttributes;
